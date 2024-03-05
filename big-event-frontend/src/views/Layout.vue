@@ -21,13 +21,13 @@ import avatar from '@/assets/default.png'
             <!-- element-plus的菜单标签 -->
             <el-menu active-text-color="#ffd04b" background-color="#232323"  text-color="#fff"
                 router>
-                <el-menu-item >
+                <el-menu-item index="/article/cateagory">
                     <el-icon>
                         <Management />
                     </el-icon>
                     <span>文章分类</span>
                 </el-menu-item>
-                <el-menu-item >
+                <el-menu-item index="/article/manage">
                     <el-icon>
                         <Promotion />
                     </el-icon>
@@ -40,19 +40,19 @@ import avatar from '@/assets/default.png'
                         </el-icon>
                         <span>个人中心</span>
                     </template>
-                    <el-menu-item >
+                    <el-menu-item index="/user/info">
                         <el-icon>
                             <User />
                         </el-icon>
                         <span>基本资料</span>
                     </el-menu-item>
-                    <el-menu-item >
+                    <el-menu-item index="/user/avatar">
                         <el-icon>
                             <Crop />
                         </el-icon>
                         <span>更换头像</span>
                     </el-menu-item>
-                    <el-menu-item >
+                    <el-menu-item index="/user/resetPassword">
                         <el-icon>
                             <EditPen />
                         </el-icon>
@@ -66,6 +66,7 @@ import avatar from '@/assets/default.png'
             <!-- 头部区域 -->
             <el-header>
                 <div>HelloWorldClub: <strong>boyo</strong></div>
+                <!-- 下拉菜单 -->
                 <el-dropdown placement="bottom-end">
                     <span class="el-dropdown__box">
                         <el-avatar :src="avatar" />
@@ -85,9 +86,10 @@ import avatar from '@/assets/default.png'
             </el-header>
             <!-- 中间区域 -->
             <el-main>
-                <div style="width: 1290px; height: 570px;border: 1px solid red;">
+                <!-- <div style="width: 1290px; height: 570px;border: 1px solid red;">
                     内容展示区
-                </div>
+                </div> -->
+                <router-view></router-view>
             </el-main>
             <!-- 底部区域 -->
             <el-footer>大事件 ©2024 Created by HelloWorldClub</el-footer>

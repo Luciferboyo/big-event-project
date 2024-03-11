@@ -1,3 +1,3 @@
 <template>
-    重置密码
+    密码重置
 </template>

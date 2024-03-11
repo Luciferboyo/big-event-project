@@ -33,7 +33,6 @@ public class UserController {
 
     @PostMapping("/register")
     public Result register(@Pattern(regexp = "^\\S{5,16}$") String username, @Pattern(regexp = "^\\S{5,16}$")  String password){
-        System.out.println("Controller:"+username);
         //查询用户
         User user = userService.findByUserName(username);
         if (user == null){
@@ -50,9 +49,8 @@ public class UserController {
     @PostMapping("/login")
     public Result<String> login(@Pattern(regexp = "^\\S{5,16}$") String username,@Pattern(regexp = "^\\S{5,16}$")String password){
         //根据用户名查询user
-        User user = userService.findByUserName(username);
+        //User user = userService.findByUserName(username);
         User loginUser = userService.findByUserName(username);
-        System.out.println("username:"+username);
         //判断是否查询到
         if (loginUser == null){
             return  Result.error("用户名不存在");

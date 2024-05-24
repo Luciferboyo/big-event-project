@@ -3,7 +3,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/big_event
     username: root
-    password: SBdaowodehao24
+    password: //my redis password
   data:
     redis:
       host: localhost
